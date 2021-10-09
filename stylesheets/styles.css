@@ -8,6 +8,22 @@
     transform: translate(-50%, -50%);
 }
 
-.square-grid{
+.square-grid {
     border: 2px solid black;
+}
+
+#square-grid-0, #square-grid-1, #square-grid-2 {
+    border-top: none;
+}
+
+#square-grid-0, #square-grid-3, #square-grid-6 {
+    border-left: none;
+}
+
+#square-grid-2, #square-grid-5, #square-grid-8 {
+    border-right: none;
+}
+
+#square-grid-6, #square-grid-7, #square-grid-8 {
+    border-bottom: none;
 }
