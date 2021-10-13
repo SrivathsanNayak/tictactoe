@@ -1,3 +1,7 @@
+html {
+    font-family: sans-serif;
+}
+
 .container {
     display: grid;
     grid-template-columns: repeat(3, 5rem);
@@ -26,4 +30,8 @@
 
 #square-grid-6, #square-grid-7, #square-grid-8 {
     border-bottom: none;
+}
+
+.square-grid:hover {
+    background-color: #ddd;
 }
