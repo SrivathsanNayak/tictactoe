@@ -14,7 +14,8 @@ const gameBoard = (() => {
         squareGridsList[i].addEventListener("click", () => {
             console.log(`Marked Grid ${i}`);
             board[i] = "Marked";
-            // squareGridsList[i].textContent = "X";
+            squareGridsList[i].textContent = player1.playerMark;
+            squareGridsList[i].classList.add("square-grid-mark", "player1-mark");
         })
     }
 })();
