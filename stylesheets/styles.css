@@ -2,6 +2,10 @@ html {
     font-family: sans-serif;
 }
 
+.disable-select {    
+    user-select: none;
+}
+
 .container {
     display: grid;
     grid-template-columns: repeat(3, 6rem);
