@@ -6,14 +6,49 @@ html {
     user-select: none;
 }
 
+h1 {
+    display: flex;
+    justify-content: center;
+    margin: 2rem;
+    font-size: 4rem;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 1rem 0;
+    font-size: 1.25rem;
+}
+
+form div {
+    margin: 1rem 0;
+}
+
+form button {
+    margin: 1rem 0;
+    font-size: 1.25rem;
+    padding: 0.5rem 1rem;
+    background-color: ghostwhite;
+    border: 2px solid #222;
+    border-radius: 10px;
+    box-shadow: 0 0 5px #bbb;
+}
+
+form button:hover {
+    box-shadow: 0 0 10px #888;
+}
+
 .container {
     display: grid;
-    grid-template-columns: repeat(3, 6rem);
-    grid-template-rows: repeat(3, 6rem);
+    grid-template-columns: repeat(3, 5rem);
+    grid-template-rows: repeat(3, 5rem);
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+    margin: 2rem auto;
 }
 
 .square-grid {
@@ -53,4 +88,68 @@ html {
 
 .square-grid:hover {
     background-color: #ddd;
+}
+
+@media screen and (max-height: 872px) {
+    h1 {
+        font-size: 2.5rem;
+    }
+
+    form {
+        font-size: 1.15rem;
+    }
+
+    .container {
+        grid-template-columns: repeat(3, 4rem);
+        grid-template-rows: repeat(3, 4rem);
+        margin: 3rem auto;
+    }
+}
+
+@media screen and (max-height: 872px) {
+    h1 {
+        font-size: 2.5rem;
+    }
+
+    form {
+        font-size: 1.15rem;
+    }
+
+    .container {
+        grid-template-columns: repeat(3, 4rem);
+        grid-template-rows: repeat(3, 4rem);
+        margin: 3rem auto;
+    }
+}
+
+@media screen and (max-width: 972px) {
+    h1 {
+        font-size: 2.5rem;
+    }
+
+    form {
+        font-size: 1.15rem;
+    }
+
+    .container {
+        grid-template-columns: repeat(3, 4rem);
+        grid-template-rows: repeat(3, 4rem);
+        margin: 3rem auto;
+    }
+}
+
+@media screen and (max-width: 472px) {
+    h1 {
+        font-size: 2rem;
+    }
+
+    form {
+        font-size: 1rem;
+    }
+
+    .container {
+        grid-template-columns: repeat(3, 4rem);
+        grid-template-rows: repeat(3, 4rem);
+        margin: 3rem auto;
+    }
 }

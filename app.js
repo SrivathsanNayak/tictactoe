@@ -55,6 +55,7 @@ const gameBoard = (() => {
         [6, 4, 2]
     ];
 
+    //Function to check winner status after every move
     function winnerCheck() {
         winConditions.forEach((e) => {
             if (board[e[0]] == "X" && board[e[1]] == "X" && board[e[2]] == "X") {
