@@ -36,7 +36,6 @@ const gameBoard = (() => {
                     player1.playerTurn = true;
                     player2.playerTurn = false;
                 }
-                console.log(board);
                 movesLeft--;
                 console.log(`No. of moves left: ${movesLeft}`);
                 winnerCheck();
@@ -62,11 +61,11 @@ const gameBoard = (() => {
                 winner = player1.playerNumber;
                 console.log(`Player ${winner} is winner`);
             }
-            if (board[e[0]] == "O" && board[e[1]] == "O" && board[e[2]] == "O") {
+            else if (board[e[0]] == "O" && board[e[1]] == "O" && board[e[2]] == "O") {
                 winner = player2.playerNumber;
                 console.log(`Player ${winner} is winner`);
             }
-            if (movesLeft == 0 && winner == null) {
+            else if (movesLeft == 0 && winner == null) {
                 console.log("It's a tie");
             }
         })
