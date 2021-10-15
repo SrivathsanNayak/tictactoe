@@ -9,7 +9,9 @@ const player2 = player(2, 'human', 'O', false);
 //Gameboard module to return gameboard object
 const gameBoard = (() => {
     let board = [];
+    //Node list of all square grids
     let squareGridsList = document.querySelectorAll(".square-grid");
+
     for (let i = 0; i < squareGridsList.length; i++) {
         squareGridsList[i].addEventListener("click", () => {
             if (player1.playerTurn == true && squareGridsList[i].textContent == "") {
@@ -33,4 +35,16 @@ const gameBoard = (() => {
             console.log(board);
         })
     }
+
+    //List of all winning positions
+    const winConditions = [
+        [0,1,2],
+        [0,3,6], 
+        [0,4,8],
+        [1,4,7],
+        [2,5,8],
+        [3,4,5],
+        [6,7,8],
+        [6,4,2]
+    ];
 })();
