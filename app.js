@@ -20,7 +20,6 @@ const gameBoard = (() => {
         squareGridsList[i].addEventListener("click", () => {
             if (winner == null && movesLeft > 0) {
                 if (player1.playerTurn == true && squareGridsList[i].textContent == "") {
-                    console.log(`marked Grid ${i}`);
                     board[i] = player1.playerMark;
                     squareGridsList[i].textContent = player1.playerMark;
                     squareGridsList[i].classList.add("square-grid-mark", "player1-mark");
@@ -29,7 +28,6 @@ const gameBoard = (() => {
                     player2.playerTurn = true;
                 }
                 else if (player2.playerTurn == true && squareGridsList[i].textContent == "") {
-                    console.log(`marked Grid ${i}`);
                     board[i] = player2.playerMark;
                     squareGridsList[i].textContent = player2.playerMark;
                     squareGridsList[i].classList.add("square-grid-mark", "player2-mark");
@@ -38,7 +36,6 @@ const gameBoard = (() => {
                     player2.playerTurn = false;
                 }
                 movesLeft--;
-                console.log(`No. of moves left: ${movesLeft}`);
                 winnerCheck();
             }
         })
@@ -61,14 +58,9 @@ const gameBoard = (() => {
         winConditions.forEach((e) => {
             if (board[e[0]] == "X" && board[e[1]] == "X" && board[e[2]] == "X") {
                 winner = player1.playerNumber;
-                console.log(`Player ${winner} is winner`);
             }
             else if (board[e[0]] == "O" && board[e[1]] == "O" && board[e[2]] == "O") {
                 winner = player2.playerNumber;
-                console.log(`Player ${winner} is winner`);
-            }
-            else if (movesLeft == 0 && winner == null) {
-                console.log("It's a tie");
             }
         })
         winnerDisplay();
@@ -82,8 +74,6 @@ const gameBoard = (() => {
         else if (movesLeft == 0 && winner == null) {
             winnerHeading.textContent = "It's a tie.";
         }
-        console.log(gameBoard.winner);
-        console.log(winnerHeading.textContent);
     }
 
     return { board, movesLeft, winner };
