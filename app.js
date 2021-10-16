@@ -11,6 +11,7 @@ const gameBoard = (() => {
     let board = [];
     let movesLeft = 9;
     let winner = null;
+    let winnerHeading = document.getElementById("winner-heading");
 
     //Node list of all square grids
     let squareGridsList = document.querySelectorAll(".square-grid");
@@ -70,26 +71,20 @@ const gameBoard = (() => {
                 console.log("It's a tie");
             }
         })
-        displayController.winnerDisplay();
+        winnerDisplay();
     }
 
-    return { board, movesLeft, winner };
-})();
-
-const displayController = (() => {
-    let winnerHeading = document.getElementById("winner-heading");
-
-    //Displays winning player
+    //Displays winner
     function winnerDisplay() {
-        if (gameBoard.winner != null) {
-                winnerHeading.textContent = `Player ${gameBoard.winner} has won the game!`;
+        if (winner != null) {
+                winnerHeading.textContent = `Player ${winner} has won the game!`;
         }
-        else if (gameBoard.movesLeft == 0 && gameBoard.winner == null) {
+        else if (movesLeft == 0 && winner == null) {
             winnerHeading.textContent = "It's a tie.";
         }
         console.log(gameBoard.winner);
         console.log(winnerHeading.textContent);
     }
 
-    return { winnerDisplay };
+    return { board, movesLeft, winner };
 })();
