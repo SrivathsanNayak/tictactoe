@@ -13,17 +13,6 @@
 
 <body>
     <h1>Tic-Tac-Toe</h1>
-    <form>
-        <div>
-            <label for="player1-name">Name of Player 1:</label>
-            <input type="text" id="player1-name" name="player1-name">
-        </div>
-        <div>
-            <label for="player2-name">Name of Player 2:</label>
-            <input type="text" id="player2-name" name="player2-name">
-        </div>
-        <button type="button" id="start-restart">Start!</button>
-    </form>
     <div class="container disable-select">
         <div class="square-grid" id="square-grid-0"></div>
         <div class="square-grid" id="square-grid-1"></div>
@@ -35,6 +24,7 @@
         <div class="square-grid" id="square-grid-7"></div>
         <div class="square-grid" id="square-grid-8"></div>
     </div>
+    <h2 id="winner-heading"></h2>
     <script src="app.js"></script>
 </body>
 
